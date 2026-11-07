@@ -1,0 +1,50 @@
+---
+import Base from '~/layouts/Base.astro';
+import StoryExplorer from '~/components/StoryExplorer';
+import type { ExplorerStory } from '~/components/StoryExplorer';
+import { stories, themeFacets, regionFacets } from '~/lib/content';
+
+// Trim to card fields only — full text stays on the detail pages.
+const cards: ExplorerStory[] = stories.map((s) => ({
+  slug: s.slug,
+  name: s.name,
+  city: s.city,
+  region: s.region,
+  photo: s.photo,
+  excerpt: s.excerpt,
+  themes: s.themes,
+  wordCount: s.wordCount,
+}));
+---
+
+<Base
+  title={`Stories of Change — ${stories.length} people, in their own words`}
+  description={`${stories.length} first-person accounts from young people across ${new Set(stories.map((s) => s.city)).size} cities. Filter by theme, region, or search for what you are going through.`}
+  current="stories"
+>
+  <section class="shead">
+    <div class="page">
+      <div class="brand-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <h1>Stories of Change</h1>
+      <p class="shead__lead">
+        {stories.length} people wrote these themselves. Career confusion, family that stopped
+        talking, habits they could not break, the quiet sense of not being enough — find the
+        one that sounds like you.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="page">
+      <StoryExplorer client:load stories={cards} themes={themeFacets} regions={regionFacets} />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .shead { padding-block: var(--s-8) var(--s-6); }
+  .shead .brand-rule { margin-bottom: var(--s-4); }
+  .shead h1 { font-size: var(--t-3xl); }
+  .shead__lead { margin-top: var(--s-4); font-size: var(--t-lg); color: var(--ink-muted); max-width: 62ch; }
+  .section { padding-top: var(--s-4); }
+</style>

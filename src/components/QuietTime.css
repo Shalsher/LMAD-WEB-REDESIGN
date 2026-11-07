@@ -1,0 +1,103 @@
+        .qt-trigger { gap: var(--s-3); }
+        .qt-trigger__dot {
+          width: 10px; height: 10px; border-radius: 50%;
+          background: var(--brand-green);
+          box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand-green) 70%, transparent);
+          animation: qt-pulse 2.8s var(--ease) infinite;
+        }
+        @keyframes qt-pulse {
+          0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand-green) 60%, transparent); }
+          70%  { box-shadow: 0 0 0 12px transparent; }
+          100% { box-shadow: 0 0 0 0 transparent; }
+        }
+
+        .qt {
+          position: fixed; inset: 0; z-index: 1000;
+          display: grid; place-items: center;
+          background: #0C1011;
+          color: #F2EEE8;
+          padding: var(--gutter);
+          animation: qt-fade var(--dur-slow) var(--ease);
+        }
+        @keyframes qt-fade { from { opacity: 0; } to { opacity: 1; } }
+
+        .qt__close {
+          position: absolute; top: var(--s-5); right: var(--s-5);
+          min-height: 48px; padding: 0 var(--s-5);
+          background: transparent; color: #AFB8B6;
+          border: 1px solid #333E3F; border-radius: var(--r-full);
+          font-size: var(--t-sm); font-weight: 600; cursor: pointer;
+        }
+        .qt__close:hover { color: #F2EEE8; border-color: #AFB8B6; }
+
+        .qt__body { text-align: center; max-width: 36rem; }
+
+        .qt__question {
+          font-family: var(--font-display);
+          font-size: clamp(1.5rem, 4vw, 2.25rem);
+          line-height: 1.3;
+          color: #F2EEE8;
+          margin-bottom: var(--s-8);
+          text-wrap: balance;
+        }
+
+        .qt__orb {
+          position: relative; width: 180px; height: 180px; margin: 0 auto var(--s-6);
+          display: grid; place-items: center;
+        }
+        .qt__orb-ring, .qt__orb-core { position: absolute; border-radius: 50%; }
+        .qt__orb-ring {
+          width: 100%; height: 100%;
+          border: 1px solid #33413F;
+          animation: qt-breathe 12s var(--ease) infinite;
+        }
+        .qt__orb-core {
+          width: 72px; height: 72px;
+          background: radial-gradient(circle at 35% 30%, var(--brand-green), #6A7B13);
+          animation: qt-breathe 12s var(--ease) infinite;
+        }
+        .qt__orb--still .qt__orb-ring,
+        .qt__orb--still .qt__orb-core { animation: none; }
+
+        @keyframes qt-breathe {
+          0%   { transform: scale(.72); opacity: .55; }
+          33%  { transform: scale(1);   opacity: 1; }   /* in: 4s */
+          50%  { transform: scale(1);   opacity: 1; }   /* hold: 2s */
+          100% { transform: scale(.72); opacity: .55; } /* out: 6s */
+        }
+
+        .qt__breath { font-size: var(--t-lg); color: #AFB8B6; letter-spacing: .04em; }
+        .qt__count {
+          font-family: var(--font-display);
+          font-size: var(--t-2xl); color: #F2EEE8; margin-top: var(--s-3);
+          font-variant-numeric: tabular-nums;
+        }
+
+        .qt__bar {
+          margin-top: var(--s-6); height: 3px; width: min(320px, 70vw);
+          margin-inline: auto; background: #273031; border-radius: var(--r-full); overflow: hidden;
+        }
+        .qt__bar > span {
+          display: block; height: 100%;
+          background: linear-gradient(90deg, var(--brand-green), var(--brand-yellow), var(--brand-blue), var(--brand-red));
+          transition: width 1s linear;
+        }
+
+        .qt__body--done { animation: qt-fade var(--dur-slow) var(--ease); }
+        .qt__done-eyebrow { color: var(--brand-yellow); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: var(--t-sm); }
+        .qt__done-title {
+          font-family: var(--font-display); color: #FFF;
+          font-size: clamp(1.75rem, 5vw, 2.75rem); line-height: 1.2;
+          margin-block: var(--s-4) var(--s-5); text-wrap: balance;
+        }
+        .qt__done-copy { color: #AFB8B6; margin-bottom: var(--s-7); }
+        .qt__done-actions { display: flex; gap: var(--s-4); justify-content: center; flex-wrap: wrap; }
+        .qt__done-actions .btn--ghost { color: #F2EEE8; border-color: #333E3F; background: transparent; }
+        .qt__done-actions .btn--ghost:hover { color: #FFF; border-color: #AFB8B6; background: transparent; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .qt, .qt__body--done { animation: none; }
+          .qt-trigger__dot { animation: none; }
+          .qt__orb-ring, .qt__orb-core { animation: none !important; }
+          .qt__bar > span { transition: none; }
+        }

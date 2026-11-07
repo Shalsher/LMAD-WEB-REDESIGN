@@ -1,0 +1,120 @@
+---
+import { ORG } from '~/lib/content';
+const year = new Date().getFullYear();
+---
+
+<footer class="ftr">
+  <div class="page ftr__grid">
+    <div class="ftr__brand">
+      <img src="/brand/lmad-logo-header.png" alt="Let's Make A Difference" width="186" height="60" loading="lazy" />
+      <p class="ftr__tagline">{ORG.tagline}</p>
+      <div class="brand-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
+
+    <nav class="ftr__col" aria-label="The Movement">
+      <h2>The Movement</h2>
+      <ul>
+        <li><a href="/#movement">About Us</a></li>
+        <li><a href="/#movement">Vision &amp; Objectives</a></li>
+        <li><a href="/#movement">The 4 Universal Values</a></li>
+        <li><a href="/#movement">Working Team</a></li>
+      </ul>
+    </nav>
+
+    <nav class="ftr__col" aria-label="Programs">
+      <h2>Programs</h2>
+      <ul>
+        <li><a href="/#programs">National Youth Conference</a></li>
+        <li><a href="/#programs">Regional Conferences</a></li>
+        <li><a href="/#programs">LMAD Fellowship</a></li>
+        <li><a href="/#programs">December Workshop</a></li>
+      </ul>
+    </nav>
+
+    <nav class="ftr__col" aria-label="Impact and Stories">
+      <h2>Impact &amp; Stories</h2>
+      <ul>
+        <li><a href="/stories">Stories of Change</a></li>
+        <li><a href="/#impact">Photo &amp; Video</a></li>
+        <li><a href="/#impact">Annual Reports</a></li>
+        <li><a href="/#verify">Verify Certificate</a></li>
+      </ul>
+    </nav>
+
+    <div class="ftr__col">
+      <h2>Contact</h2>
+      <address>
+        {ORG.address}<br />
+        <a href={`tel:${ORG.phone.replace(/[^+\d]/g, '')}`}>{ORG.phone}</a><br />
+        <a href={`mailto:${ORG.email}`}>{ORG.email}</a>
+      </address>
+      <ul class="ftr__social">
+        <li><a href={ORG.social.instagram} rel="noopener noreferrer" target="_blank">Instagram</a></li>
+        <li><a href={ORG.social.youtube} rel="noopener noreferrer" target="_blank">YouTube</a></li>
+        <li><a href={ORG.social.facebook} rel="noopener noreferrer" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page ftr__legal">
+    <p>© {ORG.founded}–{year} {ORG.name}. Non-political. Non-religious.</p>
+    <p class="ftr__note">Registered educational trust under Section 10(23C), Income Tax Act 1961. Donations eligible under 80G.</p>
+  </div>
+</footer>
+
+<style>
+  .ftr {
+    margin-top: var(--s-9);
+    padding-block: var(--s-8) var(--s-6);
+    background: var(--parchment-sunk);
+    border-top: 1px solid var(--hairline);
+  }
+  .ftr__grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: var(--s-7) var(--s-5);
+  }
+  .ftr__brand img {
+    height: 44px; width: auto;
+    background: #fff; padding: 6px 8px; border-radius: var(--r-md);
+  }
+  .ftr__tagline {
+    margin-block: var(--s-4) var(--s-4);
+    color: var(--ink-muted);
+    font-size: var(--t-sm);
+    max-width: 30ch;
+  }
+  .ftr__col h2 {
+    font-family: var(--font-body);
+    font-size: var(--t-sm);
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: var(--s-4);
+  }
+  .ftr__col ul { list-style: none; padding: 0; display: grid; }
+  .ftr__col a {
+    color: var(--ink); text-decoration: none; font-size: var(--t-sm);
+    /* 44px minimum touch target — footer links are the easiest thing to get
+       wrong here, and they are what a parent taps looking for a phone number */
+    display: flex; align-items: center; min-height: 44px;
+  }
+  .ftr__col a:hover { color: var(--link); text-decoration: underline; }
+  address { font-style: normal; font-size: var(--t-sm); color: var(--ink-muted); line-height: 1.8; }
+  address a { color: var(--link); display: inline-flex; align-items: center; min-height: 44px; }
+  .ftr__social { margin-top: var(--s-4); display: flex !important; flex-wrap: wrap; gap: 0 var(--s-5) !important; }
+  .ftr__social a { min-height: 44px; }
+
+  .ftr__legal {
+    margin-top: var(--s-8);
+    padding-top: var(--s-5);
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-muted);
+    font-size: var(--t-sm);
+  }
+  .ftr__note { margin-top: var(--s-2); }
+
+  @media (max-width: 1000px) { .ftr__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px)  { .ftr__grid { grid-template-columns: 1fr; } }
+</style>
