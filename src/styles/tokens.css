@@ -1,0 +1,191 @@
+/*
+  LMAD design tokens — built from the logo
+  ===========================================================================
+  The LMAD mark is four solid colour blocks (L M A D) over a charcoal
+  wordmark. Those five colours ARE the brand, so they drive this system:
+
+      L  green   #AFCB1F
+      M  yellow  #FFCC01
+      A  blue    #01A0E2
+      D  red     #E31E25
+         wordmark charcoal  #424242
+
+  All five were sampled directly from the supplied logo artwork.
+
+  THE PROBLEM: the four block colours are bright by design. As TEXT on a light
+  background they measure 1.43:1 (yellow), 1.74:1 (green), 2.78:1 (blue) and
+  4.42:1 (red) — none reach the 7:1 the brief's WCAG AAA target needs.
+
+  THE SYSTEM: each brand hue gets three roles, hue preserved throughout —
+      --brand-*          the true logo colour. Blocks, fills, decoration,
+                         the logo lockup. Never small text on light.
+      --brand-*-ink      darkened to clear 7:1 on parchment. Text and links.
+      --brand-*-surface  pale tint for chips, cards and category washes.
+  Dark mode flips: the vivid logo colours sail past 7:1 on a dark ground, so
+  they are used directly there.
+*/
+
+:root {
+  /* ===== the logo, untouched ===== */
+  --brand-green:  #AFCB1F;
+  --brand-yellow: #FFCC01;
+  --brand-blue:   #01A0E2;
+  --brand-red:    #E31E25;
+  --brand-char:   #424242;
+
+  /* ===== accessible text variants =====
+     Tuned against #F2EEE8, the DARKEST light surface, so they clear 7:1
+     everywhere — on sunk sections and cards as well as the base parchment. */
+  --brand-green-ink:  #49550D;   /* 7.05:1 */
+  --brand-yellow-ink: #614D00;   /* 7.06:1 */
+  --brand-blue-ink:   #015577;   /* 7.12:1 */
+  --brand-red-ink:    #9E1419;   /* 7.07:1 */
+
+  /* ===== pale washes for chips and category surfaces ===== */
+  --brand-green-surface:  #F4F7E2;
+  --brand-yellow-surface: #FFF8DF;
+  --brand-blue-surface:   #E3F4FC;
+  --brand-red-surface:    #FDEAEA;
+
+  /* ===== surface ===== */
+  --parchment:      #FAF8F5;  /* warm off-white — easier on older eyes */
+  --parchment-sunk: #F2EEE8;
+  --surface:        #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --hairline:       #E4DED5;
+
+  /* ===== ink ===== */
+  --ink-strong:  #212121;  /* 15.9:1 — headings */
+  --ink:         #424242;  /*  9.5:1 — the logo's own wordmark grey, body text */
+  --ink-muted:   #4F4F4F;  /*  7.12:1 — meta, captions. Nothing lighter than this. */
+  --ink-inverse: #FAF8F5;
+
+  /* ===== action ===== */
+  --action:        #AA151A;                /* white on it = 7.42:1, AAA */
+  --action-hover:  #8E1115;
+  --action-ink:    #FFFFFF;
+  --link:          var(--brand-blue-ink);  /* 7.16:1 on parchment, AAA */
+  --link-hover:    #01405C;
+
+  /* ===== focus — visible on every interactive element, always ===== */
+  --focus:     #0B5FA5;
+  --focus-ring: 0 0 0 3px var(--parchment), 0 0 0 6px var(--focus);
+
+  /* ===== type ===== */
+  --font-display: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --t-sm:   1rem;        /* 16px — the smallest text anywhere */
+  --t-base: 1.125rem;    /* 18px — body, per the brief */
+  --t-lg:   1.3125rem;
+  --t-xl:   1.625rem;
+  --t-2xl:  2.125rem;
+  --t-3xl:  2.875rem;
+  --t-4xl:  clamp(2.75rem, 7vw, 5rem);
+
+  --leading-tight: 1.15;
+  --leading-snug:  1.35;
+  --leading-body:  1.7;
+
+  /* ===== space ===== */
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem;
+  --s-5: 1.5rem; --s-6: 2rem;  --s-7: 3rem;   --s-8: 4rem;
+  --s-9: 6rem;   --s-10: 8rem;
+
+  /* ===== shape ===== */
+  --r-sm: 4px; --r-md: 8px; --r-lg: 16px; --r-xl: 24px; --r-full: 999px;
+  --shadow-sm: 0 1px 2px rgba(33,33,33,.06), 0 1px 3px rgba(33,33,33,.08);
+  --shadow-md: 0 4px 12px rgba(33,33,33,.08), 0 2px 4px rgba(33,33,33,.04);
+  --shadow-lg: 0 12px 32px rgba(33,33,33,.10), 0 4px 8px rgba(33,33,33,.05);
+
+  /* ===== motion ===== */
+  --ease: cubic-bezier(.22,1,.36,1);
+  --dur-fast: 120ms; --dur: 240ms; --dur-slow: 480ms;
+
+  /* ===== layout ===== */
+  --measure: 68ch;
+  --page-max: 1200px;
+  --gutter: clamp(1rem, 5vw, 3rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Dark mode — the logo colours come into their own against a dark ground.
+   --------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --parchment:      #14191A;
+    --parchment-sunk: #0E1213;
+    --surface:        #1C2526;
+    --surface-raised: #222C2D;
+    --hairline:       #333E3F;
+
+    --ink-strong:  #FFFFFF;
+    --ink:         #F2EEE8;
+    --ink-muted:   #AFB8B6;
+    --ink-inverse: #14191A;
+
+    --brand-green-ink:  #AFCB1F;  /*  9.62:1 on #14191A */
+    --brand-yellow-ink: #FFCC01;  /* 11.73:1 */
+    --brand-blue-ink:   #01AEF6;  /*  7.11:1 */
+    --brand-red-ink:    #F08488;  /*  7.06:1 */
+
+    --brand-green-surface:  #222611;
+    --brand-yellow-surface: #262211;
+    --brand-blue-surface:   #0C1B22;
+    --brand-red-surface:    #261113;
+
+    /* Inverted in dark mode: a bright red block with white text only reaches
+       4.69:1, short of AAA. A light tint of the same logo-red hue carries dark
+       text at 7.44:1 and stands 7.44:1 clear of the page. */
+    --action:       #EC8D91;
+    --action-hover: #F2B0B3;
+    --action-ink:   #14191A;
+    --link:         #01AEF6;
+    --link-hover:   #6FD0FF;
+
+    --focus: #7FC4FF;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.45);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  --parchment:      #14191A;
+  --parchment-sunk: #0E1213;
+  --surface:        #1C2526;
+  --surface-raised: #222C2D;
+  --hairline:       #333E3F;
+
+  --ink-strong:  #FFFFFF;
+  --ink:         #F2EEE8;
+  --ink-muted:   #AFB8B6;
+  --ink-inverse: #14191A;
+
+  --brand-green-ink:  #AFCB1F;
+  --brand-yellow-ink: #FFCC01;
+  --brand-blue-ink:   #01AEF6;
+  --brand-red-ink:    #F08488;
+
+  --brand-green-surface:  #222611;
+  --brand-yellow-surface: #262211;
+  --brand-blue-surface:   #0C1B22;
+  --brand-red-surface:    #261113;
+
+  --action:       #EC8D91;
+  --action-hover: #F2B0B3;
+  --action-ink:   #14191A;
+  --link:         #01AEF6;
+  --link-hover:   #6FD0FF;
+
+  --focus: #7FC4FF;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.45);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.5);
+}
+
+/* ---------------------------------------------------------------------------
+   Reader text-size control (A- / A+ in the header). Scales the whole ramp.
+   --------------------------------------------------------------------------- */
+:root[data-text-size='large']  { --t-sm:1.125rem; --t-base:1.25rem;   --t-lg:1.5rem;    --t-xl:1.875rem; --t-2xl:2.375rem; --t-3xl:3.125rem; }
+:root[data-text-size='xlarge'] { --t-sm:1.25rem;  --t-base:1.4375rem; --t-lg:1.6875rem; --t-xl:2.125rem; --t-2xl:2.625rem; --t-3xl:3.375rem; }

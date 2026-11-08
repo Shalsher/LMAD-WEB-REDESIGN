@@ -1,0 +1,155 @@
+---
+import Base from '~/layouts/Base.astro';
+import { stories, THEMES } from '~/lib/content';
+
+export async function getStaticPaths() {
+  const { stories } = await import('~/lib/content');
+  return stories.map((story, i) => ({
+    params: { slug: story.slug },
+    props: {
+      story,
+      prev: stories[(i - 1 + stories.length) % stories.length],
+      next: stories[(i + 1) % stories.length],
+    },
+  }));
+}
+
+const { story, prev, next } = Astro.props;
+const themes = story.themes.map((id) => THEMES.find((t) => t.id === id)!).filter(Boolean);
+
+// Related: same region first, then same theme. Never the story itself.
+const related = stories
+  .filter((s) => s.slug !== story.slug)
+  .map((s) => ({
+    s,
+    score: (s.region === story.region ? 2 : 0) + s.themes.filter((t) => story.themes.includes(t)).length,
+  }))
+  .filter((r) => r.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 3)
+  .map((r) => r.s);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: `${story.name}'s Story of Change`,
+  author: { '@type': 'Person', name: story.name },
+  publisher: { '@type': 'NGO', name: "Let's Make A Difference" },
+  articleBody: story.paragraphs.join('\n\n'),
+  ...(story.photo ? { image: story.photo } : {}),
+  contentLocation: { '@type': 'Place', name: story.location },
+};
+---
+
+<Base
+  title={`${story.name} — Story of Change`}
+  description={story.excerpt}
+  image={story.photo ?? '/brand/lmad-logo.png'}
+  current="stories"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} slot="head" />
+
+  <article class="st">
+    <div class="page">
+      <nav aria-label="Breadcrumb" class="st__crumbs">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/stories">Stories of Change</a></li>
+          <li aria-current="page">{story.name}</li>
+        </ol>
+      </nav>
+
+      <header class="st__head">
+        {story.photo && (
+          <img class="st__photo" src={story.photo} alt={`Portrait of ${story.name}`} width="140" height="140" fetchpriority="high" />
+        )}
+        <div>
+          <h1>{story.name}</h1>
+          <p class="st__place">{story.location}</p>
+          <ul class="st__themes">
+            {themes.map((t) => (
+              <li><a class={`st__tag st__tag--${t.brand}`} href={`/stories#${t.id}`}>{t.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </header>
+
+      <div class="st__body prose">
+        {story.paragraphs.map((p) => <p>{p}</p>)}
+        {story.signature && <p class="st__sig">— {story.signature}</p>}
+      </div>
+
+      <nav class="st__pager" aria-label="More stories">
+        <a class="st__pager-link" href={`/stories/${prev.slug}`}>
+          <span>Previous</span>
+          <strong>{prev.name}</strong>
+        </a>
+        <a class="st__pager-link st__pager-link--next" href={`/stories/${next.slug}`}>
+          <span>Next</span>
+          <strong>{next.name}</strong>
+        </a>
+      </nav>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section section--sunk" aria-labelledby="rel-h">
+      <div class="page">
+        <h2 id="rel-h" class="st__rel-h">If this sounded familiar</h2>
+        <ul class="st__rel">
+          {related.map((r) => (
+            <li>
+              <a class="card st__rel-card" href={`/stories/${r.slug}`}>
+                {r.photo && <img src={r.photo} alt="" width="64" height="64" loading="lazy" decoding="async" />}
+                <div>
+                  <h3>{r.name}</h3>
+                  <p class="st__rel-place">{r.city}{r.region ? `, ${r.region}` : ''}</p>
+                  <p class="st__rel-ex">{r.excerpt}</p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+</Base>
+
+<style>
+  .st { padding-block: var(--s-6) var(--s-8); }
+
+  .st__crumbs ol { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-2); font-size: var(--t-sm); color: var(--ink-muted); }
+  .st__crumbs li + li::before { content: '/'; margin-right: var(--s-2); color: var(--hairline); }
+  .st__crumbs a { color: var(--ink-muted); }
+  .st__crumbs a:hover { color: var(--link); }
+
+  .st__head { display: flex; gap: var(--s-5); align-items: center; margin-block: var(--s-6) var(--s-7); flex-wrap: wrap; }
+  .st__photo { width: 120px; height: 120px; border-radius: var(--r-lg); object-fit: cover; background: var(--parchment-sunk); }
+  .st__head h1 { font-size: var(--t-3xl); }
+  .st__place { color: var(--ink-muted); margin-top: var(--s-2); }
+  .st__themes { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-4); }
+  .st__tag { font-size: var(--t-sm); font-weight: 600; padding: 4px var(--s-4); border-radius: var(--r-full); text-decoration: none; background: var(--parchment-sunk); color: var(--ink-muted); }
+  .st__tag--green  { background: var(--brand-green-surface);  color: var(--brand-green-ink); }
+  .st__tag--yellow { background: var(--brand-yellow-surface); color: var(--brand-yellow-ink); }
+  .st__tag--blue   { background: var(--brand-blue-surface);   color: var(--brand-blue-ink); }
+  .st__tag--red    { background: var(--brand-red-surface);    color: var(--brand-red-ink); }
+
+  /* Long testimony — generous measure and leading, this is the whole point */
+  .st__body { font-size: var(--t-base); line-height: 1.8; }
+  .st__body p + p { margin-top: var(--s-5); }
+  .st__sig { font-family: var(--font-display); font-size: var(--t-lg); color: var(--ink-muted); margin-top: var(--s-6) !important; }
+
+  .st__pager { display: flex; gap: var(--s-4); justify-content: space-between; margin-top: var(--s-8); padding-top: var(--s-5); border-top: 1px solid var(--hairline); }
+  .st__pager-link { display: grid; gap: 2px; text-decoration: none; color: inherit; padding: var(--s-3) 0; min-height: 48px; }
+  .st__pager-link span { font-size: var(--t-sm); color: var(--ink-muted); }
+  .st__pager-link strong { color: var(--link); font-weight: 600; }
+  .st__pager-link--next { text-align: right; }
+
+  .st__rel-h { font-size: var(--t-xl); margin-bottom: var(--s-5); }
+  .st__rel { list-style: none; padding: 0; display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .st__rel-card { display: flex; gap: var(--s-4); padding: var(--s-4); text-decoration: none; color: inherit; height: 100%; }
+  .st__rel-card img { width: 56px; height: 56px; border-radius: var(--r-md); object-fit: cover; flex-shrink: 0; background: var(--parchment-sunk); }
+  .st__rel-card h3 { font-size: var(--t-base); color: var(--ink-strong); }
+  .st__rel-place { font-size: var(--t-sm); color: var(--ink-muted); }
+  .st__rel-ex { font-size: var(--t-sm); margin-top: var(--s-2); line-height: 1.55; }
+</style>

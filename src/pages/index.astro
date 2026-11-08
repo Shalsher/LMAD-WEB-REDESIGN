@@ -1,0 +1,239 @@
+---
+import Base from '~/layouts/Base.astro';
+import QuietTime from '~/components/QuietTime';
+import PersonaSwitcher from '~/components/PersonaSwitcher';
+import { stories, IMPACT_STATS, ORG } from '~/lib/content';
+
+// Six strongest story cards for the homepage strip.
+const featured = stories
+  .filter((s) => s.photo && s.wordCount > 450)
+  .sort((a, b) => b.wordCount - a.wordCount)
+  .slice(0, 6);
+---
+
+<Base
+  title="Let's Make A Difference — a youth movement since 1993"
+  description="A national youth movement, non-political and non-religious, running since 1993. Eight days that change how young people see themselves — and 182 of them have written down what happened."
+>
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="page hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow">Since 1993 · Non-political · Non-religious</p>
+
+        <h1 class="hero__title">
+          What is truly right for me,<br />
+          <em>and how can I bring that change into my life?</em>
+        </h1>
+
+        <p class="hero__lead">
+          That one question, asked in silence, is where it starts. Thirty-three years,
+          {new Set(stories.map((s) => s.city)).size} cities, and more than 20,000 young people
+          who came looking for an answer.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#join" class="btn btn--primary">Join the next conference</a>
+          <QuietTime client:idle />
+        </div>
+
+        <p class="hero__hint">
+          Sixty seconds, right here in your browser. It is how every morning begins with us.
+        </p>
+      </div>
+
+      <div class="hero__blocks" aria-hidden="true">
+        <span class="hero__block hero__block--green"></span>
+        <span class="hero__block hero__block--yellow"></span>
+        <span class="hero__block hero__block--blue"></span>
+        <span class="hero__block hero__block--red"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section class="section section--sunk" aria-labelledby="impact-h">
+    <div class="page">
+      <h2 id="impact-h" class="visually-hidden">Impact in numbers</h2>
+      <ul class="stats">
+        {IMPACT_STATS.map((s) => (
+          <li class={`stat stat--${s.brand}`}>
+            <p class="stat__value">{s.value}<span>{s.suffix}</span></p>
+            <p class="stat__label">{s.label}</p>
+            <p class="stat__detail">{s.detail}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="stats__note">
+        Every figure above is counted from our own published record, not rounded up for a brochure.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== PERSONAS ==================== -->
+  <section class="section" id="movement" aria-labelledby="persona-h">
+    <div class="page">
+      <header class="sec-head">
+        <div class="brand-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h2 id="persona-h">Where would you like to start?</h2>
+        <p>Three very different questions bring people here. Pick the one that sounds like yours.</p>
+      </header>
+      <PersonaSwitcher client:visible />
+    </div>
+  </section>
+
+  <!-- ==================== STORIES ==================== -->
+  <section class="section section--sunk" id="impact" aria-labelledby="stories-h">
+    <div class="page">
+      <header class="sec-head sec-head--row">
+        <div>
+          <div class="brand-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <h2 id="stories-h">Stories of Change</h2>
+          <p>
+            {stories.length} people have written, in their own words, what changed and why.
+            No summaries, no editing for comfort.
+          </p>
+        </div>
+        <a href="/stories" class="btn btn--ghost">Read all {stories.length}</a>
+      </header>
+
+      <ul class="feat">
+        {featured.map((s) => (
+          <li>
+            <a class="feat__card card" href={`/stories/${s.slug}`}>
+              {s.photo && (
+                <img src={s.photo} alt="" width="96" height="96" loading="lazy" decoding="async" />
+              )}
+              <div>
+                <h3>{s.name}</h3>
+                <p class="feat__place">{s.city}{s.region ? `, ${s.region}` : ''}</p>
+                <p class="feat__excerpt">{s.excerpt}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== PROGRAMS ==================== -->
+  <section class="section" id="programs" aria-labelledby="programs-h">
+    <div class="page">
+      <header class="sec-head">
+        <div class="brand-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h2 id="programs-h">What actually happens</h2>
+        <p>Eight residential days at the National Youth Conference, plus regional conferences across India.</p>
+      </header>
+
+      <ol class="days">
+        <li class="day day--green"><span class="day__n">Day 1</span><h3>Arrival &amp; unplugging</h3><p>Phones go away. You meet the people you will spend eight days with.</p></li>
+        <li class="day day--yellow"><span class="day__n">Every morning</span><h3>Quiet Time</h3><p>Before anything else, silence. One honest question, and whatever answer comes.</p></li>
+        <li class="day day--blue"><span class="day__n">Daily</span><h3>Sharing circles</h3><p>People say out loud what they have never told anyone. Nobody is required to.</p></li>
+        <li class="day day--red"><span class="day__n">Day 8</span><h3>The new beginning</h3><p>You write a letter to yourself, and go home to the same life with different eyes.</p></li>
+      </ol>
+
+      <p class="days__note">
+        A full day-by-day timeline is still being written with the coordinators — these four
+        moments are what participants mention most in their stories.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== JOIN ==================== -->
+  <section class="section section--sunk" id="join" aria-labelledby="join-h">
+    <div class="page join">
+      <div>
+        <div class="brand-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h2 id="join-h">The next National Youth Conference</h2>
+        <p class="join__lead">
+          Eight residential days, 1–8 June. Open to anyone between 15 and 28, from anywhere in India.
+        </p>
+        <div class="join__actions">
+          <a href={`mailto:${ORG.email}?subject=National%20Youth%20Conference`} class="btn btn--primary">Register your interest</a>
+          <a href={`tel:${ORG.phone.replace(/[^+\d]/g, '')}`} class="btn btn--ghost">Call {ORG.phone}</a>
+        </div>
+        <p class="join__note">
+          Dates for the next conference are being confirmed with the coordinators. Registration opens here first.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---------- hero ---------- */
+  .hero { padding-block: clamp(var(--s-8), 10vw, var(--s-10)) var(--s-8); overflow: hidden; }
+  .hero__inner { display: grid; grid-template-columns: 1fr auto; gap: var(--s-8); align-items: center; }
+  .hero__content { max-width: 56ch; }
+  .hero__title {
+    margin-block: var(--s-4) var(--s-5);
+    font-size: var(--t-4xl);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .hero__title em { font-style: italic; color: var(--brand-blue-ink); }
+  .hero__lead { font-size: var(--t-lg); color: var(--ink-muted); max-width: 52ch; }
+  .hero__actions { display: flex; gap: var(--s-4); flex-wrap: wrap; margin-top: var(--s-7); }
+  .hero__hint { margin-top: var(--s-4); font-size: var(--t-sm); color: var(--ink-muted); }
+
+  /* the logo's four blocks, enlarged as the hero's visual anchor */
+  .hero__blocks { display: grid; grid-template-columns: repeat(2, 86px); gap: 12px; }
+  .hero__block { display: block; aspect-ratio: 1; border-radius: var(--r-md); }
+  .hero__block--green  { background: var(--brand-green);  transform: translateY(-14px); }
+  .hero__block--yellow { background: var(--brand-yellow); }
+  .hero__block--blue   { background: var(--brand-blue); }
+  .hero__block--red    { background: var(--brand-red);    transform: translateY(14px); }
+
+  @media (max-width: 900px) { .hero__blocks { display: none; } .hero__inner { grid-template-columns: 1fr; } }
+
+  /* ---------- section headers ---------- */
+  .sec-head { margin-bottom: var(--s-7); max-width: 60ch; }
+  .sec-head .brand-rule { margin-bottom: var(--s-4); }
+  .sec-head h2 { margin-bottom: var(--s-3); }
+  .sec-head p { color: var(--ink-muted); }
+  .sec-head--row { display: flex; justify-content: space-between; align-items: end; gap: var(--s-5); max-width: none; }
+  @media (max-width: 720px) { .sec-head--row { flex-direction: column; align-items: start; } }
+
+  /* ---------- stats ---------- */
+  .stats { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-5); }
+  .stat { padding-left: var(--s-5); border-left: 4px solid var(--hairline); }
+  .stat--green  { border-left-color: var(--brand-green); }
+  .stat--yellow { border-left-color: var(--brand-yellow); }
+  .stat--blue   { border-left-color: var(--brand-blue); }
+  .stat--red    { border-left-color: var(--brand-red); }
+  .stat__value { font-family: var(--font-display); font-size: var(--t-3xl); line-height: 1; color: var(--ink-strong); }
+  .stat__value span { color: var(--ink-muted); }
+  .stat__label { font-size: var(--t-base); font-weight: 600; margin-top: var(--s-2); }
+  .stat__detail { font-size: var(--t-sm); color: var(--ink-muted); margin-top: 2px; }
+  .stats__note { margin-top: var(--s-6); font-size: var(--t-sm); color: var(--ink-muted); }
+  @media (max-width: 860px) { .stats { grid-template-columns: repeat(2, 1fr); gap: var(--s-6); } }
+  @media (max-width: 420px) { .stats { grid-template-columns: 1fr; } }
+
+  /* ---------- featured stories ---------- */
+  .feat { list-style: none; padding: 0; display: grid; gap: var(--s-5); grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+  .feat__card { display: flex; gap: var(--s-4); padding: var(--s-4); text-decoration: none; color: inherit; height: 100%; }
+  .feat__card img { width: 72px; height: 72px; border-radius: var(--r-md); object-fit: cover; flex-shrink: 0; background: var(--parchment-sunk); }
+  .feat__card h3 { font-size: var(--t-lg); color: var(--ink-strong); line-height: 1.2; }
+  .feat__place { font-size: var(--t-sm); color: var(--ink-muted); margin-top: 2px; }
+  .feat__excerpt { font-size: var(--t-sm); line-height: 1.6; margin-top: var(--s-3); }
+
+  /* ---------- 8 days ---------- */
+  .days { list-style: none; padding: 0; counter-reset: d; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-5); }
+  .day { padding: var(--s-5); background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-lg); border-top: 4px solid var(--hairline); }
+  .day--green  { border-top-color: var(--brand-green); }
+  .day--yellow { border-top-color: var(--brand-yellow); }
+  .day--blue   { border-top-color: var(--brand-blue); }
+  .day--red    { border-top-color: var(--brand-red); }
+  .day__n { font-size: var(--t-sm); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+  .day h3 { font-size: var(--t-lg); margin-block: var(--s-2) var(--s-3); }
+  .day p { font-size: var(--t-sm); color: var(--ink-muted); line-height: 1.6; }
+  .days__note { margin-top: var(--s-6); font-size: var(--t-sm); color: var(--ink-muted); }
+  @media (max-width: 940px) { .days { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .days { grid-template-columns: 1fr; } }
+
+  /* ---------- join ---------- */
+  .join__lead { font-size: var(--t-lg); color: var(--ink-muted); margin-block: var(--s-3) var(--s-6); max-width: 52ch; }
+  .join .brand-rule { margin-bottom: var(--s-4); }
+  .join__actions { display: flex; gap: var(--s-4); flex-wrap: wrap; }
+  .join__note { margin-top: var(--s-5); font-size: var(--t-sm); color: var(--ink-muted); }
+</style>

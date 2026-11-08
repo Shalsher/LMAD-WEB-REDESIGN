@@ -1,0 +1,116 @@
+{
+ "heroSlider": [
+  "https://lmad.in/public/storage/gallery/7gallery63galleryBanner3.jpg",
+  "https://lmad.in/public/storage/gallery/8gallery74gallerybanner-02.jpg",
+  "https://lmad.in/public/storage/gallery/9gallery89gallerybanner-03.jpg",
+  "https://lmad.in/public/storage/gallery/10gallery78gallerybanner-04.jpg",
+  "https://lmad.in/public/storage/gallery/11gallery80gallerybanner-05.jpg",
+  "https://lmad.in/public/storage/gallery/12gallery82gallerybanner-06.jpg",
+  "https://lmad.in/public/storage/gallery/13gallery84gallerybanner-07.jpg",
+  "https://lmad.in/public/storage/gallery/14gallery86gallerybanner-08.jpg",
+  "https://lmad.in/public/storage/gallery/15gallery88gallerybanner-09.jpg",
+  "https://lmad.in/public/storage/gallery/16gallery90gallerybanner-10.jpg",
+  "https://lmad.in/public/storage/gallery/17gallery92gallerybanner-11.jpg",
+  "https://lmad.in/public/storage/gallery/18gallery94gallerybanner-12.jpg",
+  "https://lmad.in/public/storage/gallery/19gallery96gallerybanner-13.jpg",
+  "https://lmad.in/public/storage/gallery/20gallery98gallerybanner-14.jpg",
+  "https://lmad.in/public/storage/gallery/21gallery100gallerybanner-15.jpg",
+  "https://lmad.in/public/storage/gallery/22gallery102gallerybanner-16.jpg",
+  "https://lmad.in/public/storage/gallery/23gallery104gallerybanner-17.jpg",
+  "https://lmad.in/public/storage/gallery/24gallery106gallerybanner-18.jpg",
+  "https://lmad.in/public/storage/gallery/25gallery108gallerybanner-19.jpg",
+  "https://lmad.in/public/storage/gallery/26gallery72gallerybanner-20.jpg"
+ ],
+ "featureCards": [
+  {
+   "title": "PHOTO GALLERY",
+   "href": "https://lmad.in/photo-gallery"
+  },
+  {
+   "title": "Participant Quotes",
+   "href": "https://lmad.in/participant-quotes"
+  },
+  {
+   "title": "LMAD Fellowship",
+   "href": "https://lmad.in/lmad-fellowship-2021"
+  },
+  {
+   "title": "Coordinators Way of Life",
+   "href": "https://lmad.in/workshop"
+  }
+ ],
+ "welcome": {
+  "heading": "Welcome to Let's Make A Difference",
+  "body": [
+   "We are a community of young people inspired by the idea of Let’s Make A Difference. Lets Make A Difference challenges each individual to reflect deeply and ask a simple yet powerful question in silence: “What is truly right for me, and how can I bring that change into my life?” This inner inquiry is where the journey of transformation begins. Change starts with you when you reform yourself, you naturally influence and inspire thousands around you. This powerful idea has resonated with countless young people across India, bringing them together year after year in a shared journey of self-discovery, purpose, and positive change."
+  ],
+  "logo": "https://lmad.in/public/storage/editor/Zwep2ij5lPBD7MDexwy0AQ1kl71HL9dxGXp4Usw9.jpg",
+  "cta": "https://lmad.in/about-us"
+ },
+ "vision": {
+  "heading": "VISION",
+  "body": [
+   "Let's Make A Difference focuses on the youth, working tirelessly to nurture a generation of individuals driven by moral values, healthy relationships and a responsibility to make society and the country better. We believe that listening to and connecting with young people will help us transform the world at large, by inspiring every single individual to make a difference."
+  ],
+  "cta": "https://lmad.in/vision-objectives"
+ },
+ "storiesCarousel": {
+  "heading": "Stories of Change",
+  "items": [
+   "https://lmad.in/chirag-samtani",
+   "https://lmad.in/kedar-kiran-ghonsikar",
+   "https://lmad.in/anurag-maloo",
+   "https://lmad.in/vaishali-raheja",
+   "https://lmad.in/nikita-bhagat",
+   "https://lmad.in/bharat-danao"
+  ]
+ },
+ "guestSpeakersStrip": {
+  "heading": "Guest Speakers",
+  "links": [
+   "https://lmad.in/speakers",
+   "https://lmad.in/speakers#sp4",
+   "https://lmad.in/speakers#sp6",
+   "https://lmad.in/speakers#sp55",
+   "https://lmad.in/speakers#sp33"
+  ],
+  "images": [
+   "https://lmad.in/public/frontend/images/line.jpg",
+   "https://lmad.in/public/storage/images/Ashish_Vidyarthi.jpg",
+   "https://lmad.in/public/storage/images/Atul_Kulkarni.jpg",
+   "https://lmad.in/public/storage/images/Vinay_Pathak.jpg",
+   "https://lmad.in/public/storage/images/Pawan_Sarda.jpg",
+   "https://lmad.in/public/frontend/images/line1.jpg",
+   "https://lmad.in/public/frontend/images/line2.jpg"
+  ]
+ },
+ "donateBox": {
+  "text": "data-wow-delay=\"1.5s\"> Upcoming Events",
+  "href": "https://lmad.in/upcoming_events"
+ },
+ "allHomeImages": [
+  "https://lmad.in/public/storage/setting/logo.png",
+  "https://lmad.in/public/storage/editor/X5O4B5OGqmwtX6mHW8gV8CJPgm52yxlgOVl9Gqat.png",
+  "https://lmad.in/public/storage/editor/UnRPfLZXmAoqRPKPU52Iz2bG32jCN86oXwsUf1RV.png",
+  "https://lmad.in/public/storage/editor/s9DlOXPOJHsnrVPn6MsQAucnVxtZAQuBapuccKgW.png",
+  "https://lmad.in/public/storage/editor/6w8UIhPHyU3ave4ocH1D5m7nEbZbXVCsUWjeYKQP.png",
+  "https://lmad.in/public/storage/editor/Zwep2ij5lPBD7MDexwy0AQ1kl71HL9dxGXp4Usw9.jpg",
+  "https://lmad.in/public/storage/stories/chirag-samtani.jpg",
+  "https://lmad.in/public/storage/stories/kedar-kiran-ghonsikar.jpg",
+  "https://lmad.in/public/storage/stories/anurag-maloo.jpg",
+  "https://lmad.in/public/storage/stories/vaishali-raheja.jpg",
+  "https://lmad.in/public/storage/stories/nikita-bhagat.jpg",
+  "https://lmad.in/public/storage/stories/bharat-danao.jpg",
+  "https://lmad.in/public/storage/images/Ashish_Vidyarthi.jpg",
+  "https://lmad.in/public/storage/images/Atul_Kulkarni.jpg",
+  "https://lmad.in/public/storage/images/Vinay_Pathak.jpg",
+  "https://lmad.in/public/storage/images/Pawan_Sarda.jpg"
+ ],
+ "featureCardImages": [
+  "https://lmad.in/public/storage/editor/X5O4B5OGqmwtX6mHW8gV8CJPgm52yxlgOVl9Gqat.png",
+  "https://lmad.in/public/storage/editor/UnRPfLZXmAoqRPKPU52Iz2bG32jCN86oXwsUf1RV.png",
+  "https://lmad.in/public/storage/editor/s9DlOXPOJHsnrVPn6MsQAucnVxtZAQuBapuccKgW.png",
+  "https://lmad.in/public/storage/editor/6w8UIhPHyU3ave4ocH1D5m7nEbZbXVCsUWjeYKQP.png"
+ ],
+ "welcomeImage": "https://lmad.in/public/storage/editor/Zwep2ij5lPBD7MDexwy0AQ1kl71HL9dxGXp4Usw9.jpg"
+}

@@ -1,0 +1,603 @@
+{
+ "generatedAt": "2026-11-03",
+ "source": "https://lmad.in",
+ "summary": {
+  "totalPages": 216,
+  "totalWords": 156618,
+  "mediaAssets": 636,
+  "mediaBytesMB": 340.6,
+  "brokenAssets": 7
+ },
+ "collections": [
+  {
+   "name": "Stories of Change",
+   "count": 182,
+   "words": 112173,
+   "file": "stories.json",
+   "note": "Individual first-person testimonies, each with own URL + portrait photo",
+   "coverage": {
+    "cities": 55,
+    "regions": 22,
+    "avgWords": 616
+   }
+  },
+  {
+   "name": "Guest Speakers",
+   "count": 56,
+   "words": 12607,
+   "file": "speakers.json",
+   "note": "Notable speakers incl. Dr A.P.J. Abdul Kalam, Kiran Bedi, Rajmohan Gandhi, P.C. Sainath"
+  },
+  {
+   "name": "Core / Working Team",
+   "count": 30,
+   "words": 3956,
+   "file": "core-team.json",
+   "note": "7 trustees + 23 team members"
+  },
+  {
+   "name": "Documents (PDF archive)",
+   "count": 142,
+   "words": null,
+   "file": "documents.json",
+   "note": "Conference/workshop reports, surveys, newsletters, impact reports",
+   "coverage": {
+    "yearFrom": 1996,
+    "yearTo": 2026,
+    "sizeMB": 308.3
+   }
+  },
+  {
+   "name": "Photo Albums",
+   "count": 64,
+   "words": null,
+   "file": "photo-albums.json",
+   "note": "Google Drive hosted; 1996-2026"
+  },
+  {
+   "name": "Press Coverage",
+   "count": 105,
+   "groups": 13,
+   "file": "press-coverage.json",
+   "note": "Scanned newspaper clippings as images (no OCR text)"
+  },
+  {
+   "name": "Participant Quotes",
+   "count": 22,
+   "words": 816,
+   "file": "participant-quotes.json"
+  },
+  {
+   "name": "Events",
+   "count": 6,
+   "file": "events.json",
+   "note": "4 upcoming (STALE - 3 already past), 2 archived speaker events"
+  },
+  {
+   "name": "Static Pages",
+   "count": 34,
+   "words": 27066,
+   "file": "pages.json"
+  }
+ ],
+ "storyCoverage": {
+  "byCity": {
+   "Pune": 34,
+   "Mumbai": 20,
+   "Jamshedpur": 17,
+   "Nagpur": 14,
+   "Katni": 14,
+   "Indore": 10,
+   "Thane": 4,
+   "Kolkata": 4,
+   "Satara": 4,
+   "Nashik": 3,
+   "Vadodara": 3,
+   "Aurangabad": 3,
+   "Baramati": 3,
+   "Ahmedabad": 2,
+   "New Delhi": 2,
+   "Rourkela": 2,
+   "Delhi": 2,
+   "Solapur": 2,
+   "Dharashiv": 2,
+   "Chennai": 2,
+   "Sholapur": 1,
+   "Allahabad": 1,
+   "Kishangarh": 1,
+   "Puri": 1,
+   "Milpitas": 1,
+   "Nakuru": 1,
+   "Ahmedebad": 1,
+   "Baroda": 1,
+   "Coonoor": 1,
+   "Fort Collins": 1,
+   "Navi Mumbai": 1,
+   "Khasab": 1,
+   "Raipur": 1,
+   "Ankleshwar": 1,
+   "Boston": 1,
+   "Bhanpura": 1,
+   "Sagar": 1,
+   "Roorkee": 1,
+   "Veraval": 1,
+   "Bhavnagar": 1,
+   "Atlanta": 1,
+   "Sambalpur": 1,
+   "Surat": 1,
+   "Nuapada": 1,
+   "Dubai": 1,
+   "Lucknow": 1,
+   "Jabalpur": 1,
+   "Yavatmal": 1,
+   "Bengaluru": 1,
+   "Kathmandu": 1,
+   "Ahmednagar": 1,
+   "Itanagar": 1,
+   "Bangalore": 1,
+   "Haridwar": 1,
+   "Ahmednagr": 1
+  },
+  "byRegion": {
+   "Maharashtra": 93,
+   "Madhya Pradesh": 27,
+   "Jharkhand": 17,
+   "Gujarat": 11,
+   "Odisha": 4,
+   "West Bengal": 4,
+   "Tamil Nadu": 3,
+   "Uttar Pradesh": 2,
+   "USA": 2,
+   "Uttarakhand": 2,
+   "Karnataka": 2,
+   "Ajmer, Rajasthan": 1,
+   "Kenya": 1,
+   "Colorado": 1,
+   "Oman": 1,
+   "Chhattisgarh": 1,
+   "Maharashtra.": 1,
+   "Georgia": 1,
+   "Orissa": 1,
+   "UAE": 1,
+   "Nepal": 1,
+   "Arunachal Pradesh": 1
+  }
+ },
+ "documentsByType": {
+  "Conference Report": 101,
+  "Other": 7,
+  "Youth Survey": 8,
+  "Workshop Report": 16,
+  "Newsletter": 10
+ },
+ "globalConfig": {
+  "heroBanners": [],
+  "featureCards": [
+   {
+    "title": "PHOTO GALLERY",
+    "href": "https://lmad.in/photo-gallery"
+   },
+   {
+    "title": "Welcome to Let's Make A Difference We are a community of young people inspired by the idea of Let’s Make A Difference. Lets Make A Difference challenges each individual to reflect deeply and ask a simple yet powerful question in silence: “What is truly right for me, and how can I bring that change into my life?” This inner inquiry is where the journey of transformation begins. Change starts with you when you reform yourself, you naturally influence and inspire thousands around you. This powerful idea has resonated with countless young people across India, bringing them together year after year in a shared journey of self-discovery, purpose, and positive change. read more VISION Let's Make A Difference focuses on the youth, working tirelessly to nurture a generation of individuals driven by moral values, healthy relationships and a responsibility to make society and the country better. We believe that listening to and connecting with young people will help us transform the world at large, by inspiring every single individual to make a difference. read more Stories of Change When I arrived at Asia plateau, Panchgani, I had no idea what was in store for me, what that beautiful place had to offer. Here I am, after the conference, with hope. Hope for myself, hope for the... Chirag Samtani - Coonoor, Tamil Nadu I was introduced to Let's Make A Difference, at a very crucial stage of my life - when I turned 19 years old. In 2014 my father Mr. Kiran Ghonsikar who is working in one of the many leading Italian... Kedar Kiran Ghonsikar - Pune, Maharashtra About Anurag Maloo “Be a volunteer, leader and a change-maker!” This forms the motto of Anurag’s work and life. Dreams play an important role in shaping the mission of his life j... Anurag Maloo - Kishangarh, Ajmer, Rajasthan I came to this conference in 2016. My cousin always talked about MRA and this youth conference. So, in 2016, he brought me and few of our cousins to this Conference. At first I thought it would be... Vaishali Raheja - Indore, Madhya Pradesh Nikita Bhagat's Story of Change As a fifteen year old, I did all that was expected of a focussed sincere kid – excelled in academics, performed well in the professional sports circuit, follo... Nikita Bhagat - Pune, Maharashtra I vividly remember the summer of 2018. I was 16years old, my 12th boards exams were over and I felt like a free bird ready to fly higher in the open blue sky. That is what every teenager would thin... Bharat Danao - Pune, Maharashtra Guest Speakers",
+    "href": "https://lmad.in/speakers#sp4"
+   }
+  ],
+  "contact": {
+   "orgName": "Let's Make A Difference",
+   "address": "A - 394, 3rd Floor, Defence Colony New Delhi - 110024, India",
+   "phones": [
+    "+91 84323-21993"
+   ],
+   "emails": [
+    "info@lmad.in"
+   ]
+  },
+  "socialLinks": [
+   "https://www.facebook.com/pages/IofC-LMAD/220123374684520",
+   "https://www.youtube.com/@lmadproduction",
+   "https://www.instagram.com/lmad.youth?igsh=MXQ5Ym9mc25hd2g1ZA=="
+  ],
+  "newsletter": {
+   "provider": "Mailchimp",
+   "formAction": "https://lmad.us20.list-manage.com/subscribe/post?u=21a16dbd132e84d11f6f342a0&amp;id=4a58d4759e&amp;f_id=001c4de6f0"
+  },
+  "footerLinks": [
+   {
+    "text": "+91 84323-21993",
+    "href": "tel:+91 84323-21993"
+   },
+   {
+    "text": "info@lmad.in",
+    "href": "mailto:info@lmad.in"
+   }
+  ],
+  "copyright": "© 1995 - 2026 Let's Make a Difference",
+  "navigation": [
+   {
+    "text": "Upcoming Events",
+    "href": "https://lmad.in/upcoming_events"
+   },
+   {
+    "text": "Home",
+    "href": "https://lmad.in"
+   },
+   {
+    "text": "About Us",
+    "href": "https://lmad.in/about-us"
+   },
+   {
+    "text": "Vision & Objectives",
+    "href": "https://lmad.in/vision-objectives"
+   },
+   {
+    "text": "Universal Values",
+    "href": "https://lmad.in/values"
+   },
+   {
+    "text": "Working Team",
+    "href": "https://lmad.in/core-team"
+   },
+   {
+    "text": "Donate",
+    "href": "https://lmad.in/donate"
+   },
+   {
+    "text": "Activities",
+    "href": "https://lmad.in/activities"
+   },
+   {
+    "text": "Coordinators way of life",
+    "href": "https://lmad.in/workshop"
+   },
+   {
+    "text": "Youth Conferences",
+    "href": "https://lmad.in/conferences"
+   },
+   {
+    "text": "National Youth Conference",
+    "href": "https://lmad.in/youth-conference"
+   },
+   {
+    "text": "Regional Youth Conferences",
+    "href": "https://lmad.in/regional-conferences"
+   },
+   {
+    "text": "Baramati, Maharashtra",
+    "href": "https://lmad.in/baramati"
+   },
+   {
+    "text": "Bhavnagar, Gujarat",
+    "href": "https://lmad.in/bhavnagar-gujarat"
+   },
+   {
+    "text": "Bhubaneswar, Odisha",
+    "href": "https://lmad.in/odisha-prayas"
+   },
+   {
+    "text": "Indore, Madhya Pradesh",
+    "href": "https://lmad.in/indore"
+   },
+   {
+    "text": "Jamshedpur, Jharkhand",
+    "href": "https://lmad.in/jamshedpur-savera"
+   },
+   {
+    "text": "December Workshop",
+    "href": "https://lmad.in/december-workshop"
+   },
+   {
+    "text": "LMAD Fellowship",
+    "href": "https://lmad.in/lmad-fellowship-2021"
+   },
+   {
+    "text": "Gallery",
+    "href": "https://lmad.in/photo-gallery"
+   },
+   {
+    "text": "Photo Gallery",
+    "href": "https://lmad.in/photo-gallery"
+   },
+   {
+    "text": "Video Gallery",
+    "href": "https://lmad.in/video-gallery"
+   },
+   {
+    "text": "Press Releases",
+    "href": "https://lmad.in/press-releases"
+   },
+   {
+    "text": "Reports",
+    "href": "https://lmad.in/reports"
+   },
+   {
+    "text": "Stories of Change",
+    "href": "https://lmad.in/stories-of-change"
+   },
+   {
+    "text": "Guest Speakers",
+    "href": "https://lmad.in/speakers"
+   },
+   {
+    "text": "Events",
+    "href": "https://lmad.in/events"
+   },
+   {
+    "text": "About Certificates",
+    "href": "https://lmad.in/about-certificates"
+   },
+   {
+    "text": "Survey",
+    "href": "https://lmad.in/survey"
+   },
+   {
+    "text": "Participant Quotes",
+    "href": "https://lmad.in/participant-quotes"
+   },
+   {
+    "text": "Newsletters",
+    "href": "https://lmad.in/newsletters"
+   },
+   {
+    "text": "Letter to Self",
+    "href": "https://lmad.in/letter-to-self"
+   },
+   {
+    "text": "Contact Us",
+    "href": "https://lmad.in/contact-us"
+   },
+   {
+    "text": "E-Certificate",
+    "href": "/ecertificate"
+   },
+   {
+    "text": "Verification",
+    "href": "https://lmad.in/registration/verification"
+   },
+   {
+    "text": "read more",
+    "href": "https://lmad.in/about-us"
+   },
+   {
+    "text": "read more",
+    "href": "https://lmad.in/vision-objectives"
+   }
+  ]
+ },
+ "homepageStructure": {
+  "heroSlider": [
+   "https://lmad.in/public/storage/gallery/7gallery63galleryBanner3.jpg",
+   "https://lmad.in/public/storage/gallery/8gallery74gallerybanner-02.jpg",
+   "https://lmad.in/public/storage/gallery/9gallery89gallerybanner-03.jpg",
+   "https://lmad.in/public/storage/gallery/10gallery78gallerybanner-04.jpg",
+   "https://lmad.in/public/storage/gallery/11gallery80gallerybanner-05.jpg",
+   "https://lmad.in/public/storage/gallery/12gallery82gallerybanner-06.jpg",
+   "https://lmad.in/public/storage/gallery/13gallery84gallerybanner-07.jpg",
+   "https://lmad.in/public/storage/gallery/14gallery86gallerybanner-08.jpg",
+   "https://lmad.in/public/storage/gallery/15gallery88gallerybanner-09.jpg",
+   "https://lmad.in/public/storage/gallery/16gallery90gallerybanner-10.jpg",
+   "https://lmad.in/public/storage/gallery/17gallery92gallerybanner-11.jpg",
+   "https://lmad.in/public/storage/gallery/18gallery94gallerybanner-12.jpg",
+   "https://lmad.in/public/storage/gallery/19gallery96gallerybanner-13.jpg",
+   "https://lmad.in/public/storage/gallery/20gallery98gallerybanner-14.jpg",
+   "https://lmad.in/public/storage/gallery/21gallery100gallerybanner-15.jpg",
+   "https://lmad.in/public/storage/gallery/22gallery102gallerybanner-16.jpg",
+   "https://lmad.in/public/storage/gallery/23gallery104gallerybanner-17.jpg",
+   "https://lmad.in/public/storage/gallery/24gallery106gallerybanner-18.jpg",
+   "https://lmad.in/public/storage/gallery/25gallery108gallerybanner-19.jpg",
+   "https://lmad.in/public/storage/gallery/26gallery72gallerybanner-20.jpg"
+  ],
+  "featureCards": [
+   {
+    "title": "PHOTO GALLERY",
+    "href": "https://lmad.in/photo-gallery"
+   },
+   {
+    "title": "Participant Quotes",
+    "href": "https://lmad.in/participant-quotes"
+   },
+   {
+    "title": "LMAD Fellowship",
+    "href": "https://lmad.in/lmad-fellowship-2021"
+   },
+   {
+    "title": "Coordinators Way of Life",
+    "href": "https://lmad.in/workshop"
+   }
+  ],
+  "welcome": {
+   "heading": "Welcome to Let's Make A Difference",
+   "body": [
+    "We are a community of young people inspired by the idea of Let’s Make A Difference. Lets Make A Difference challenges each individual to reflect deeply and ask a simple yet powerful question in silence: “What is truly right for me, and how can I bring that change into my life?” This inner inquiry is where the journey of transformation begins. Change starts with you when you reform yourself, you naturally influence and inspire thousands around you. This powerful idea has resonated with countless young people across India, bringing them together year after year in a shared journey of self-discovery, purpose, and positive change."
+   ],
+   "logo": "https://lmad.in/public/storage/editor/Zwep2ij5lPBD7MDexwy0AQ1kl71HL9dxGXp4Usw9.jpg",
+   "cta": "https://lmad.in/about-us"
+  },
+  "vision": {
+   "heading": "VISION",
+   "body": [
+    "Let's Make A Difference focuses on the youth, working tirelessly to nurture a generation of individuals driven by moral values, healthy relationships and a responsibility to make society and the country better. We believe that listening to and connecting with young people will help us transform the world at large, by inspiring every single individual to make a difference."
+   ],
+   "cta": "https://lmad.in/vision-objectives"
+  },
+  "storiesCarousel": {
+   "heading": "Stories of Change",
+   "items": [
+    "https://lmad.in/chirag-samtani",
+    "https://lmad.in/kedar-kiran-ghonsikar",
+    "https://lmad.in/anurag-maloo",
+    "https://lmad.in/vaishali-raheja",
+    "https://lmad.in/nikita-bhagat",
+    "https://lmad.in/bharat-danao"
+   ]
+  },
+  "guestSpeakersStrip": {
+   "heading": "Guest Speakers",
+   "links": [
+    "https://lmad.in/speakers",
+    "https://lmad.in/speakers#sp4",
+    "https://lmad.in/speakers#sp6",
+    "https://lmad.in/speakers#sp55",
+    "https://lmad.in/speakers#sp33"
+   ],
+   "images": [
+    "https://lmad.in/public/frontend/images/line.jpg",
+    "https://lmad.in/public/storage/images/Ashish_Vidyarthi.jpg",
+    "https://lmad.in/public/storage/images/Atul_Kulkarni.jpg",
+    "https://lmad.in/public/storage/images/Vinay_Pathak.jpg",
+    "https://lmad.in/public/storage/images/Pawan_Sarda.jpg",
+    "https://lmad.in/public/frontend/images/line1.jpg",
+    "https://lmad.in/public/frontend/images/line2.jpg"
+   ]
+  },
+  "donateBox": {
+   "text": "data-wow-delay=\"1.5s\"> Upcoming Events",
+   "href": "https://lmad.in/upcoming_events"
+  },
+  "allHomeImages": [
+   "https://lmad.in/public/storage/setting/logo.png",
+   "https://lmad.in/public/storage/editor/X5O4B5OGqmwtX6mHW8gV8CJPgm52yxlgOVl9Gqat.png",
+   "https://lmad.in/public/storage/editor/UnRPfLZXmAoqRPKPU52Iz2bG32jCN86oXwsUf1RV.png",
+   "https://lmad.in/public/storage/editor/s9DlOXPOJHsnrVPn6MsQAucnVxtZAQuBapuccKgW.png",
+   "https://lmad.in/public/storage/editor/6w8UIhPHyU3ave4ocH1D5m7nEbZbXVCsUWjeYKQP.png",
+   "https://lmad.in/public/storage/editor/Zwep2ij5lPBD7MDexwy0AQ1kl71HL9dxGXp4Usw9.jpg",
+   "https://lmad.in/public/storage/stories/chirag-samtani.jpg",
+   "https://lmad.in/public/storage/stories/kedar-kiran-ghonsikar.jpg",
+   "https://lmad.in/public/storage/stories/anurag-maloo.jpg",
+   "https://lmad.in/public/storage/stories/vaishali-raheja.jpg",
+   "https://lmad.in/public/storage/stories/nikita-bhagat.jpg",
+   "https://lmad.in/public/storage/stories/bharat-danao.jpg",
+   "https://lmad.in/public/storage/images/Ashish_Vidyarthi.jpg",
+   "https://lmad.in/public/storage/images/Atul_Kulkarni.jpg",
+   "https://lmad.in/public/storage/images/Vinay_Pathak.jpg",
+   "https://lmad.in/public/storage/images/Pawan_Sarda.jpg"
+  ],
+  "featureCardImages": [
+   "https://lmad.in/public/storage/editor/X5O4B5OGqmwtX6mHW8gV8CJPgm52yxlgOVl9Gqat.png",
+   "https://lmad.in/public/storage/editor/UnRPfLZXmAoqRPKPU52Iz2bG32jCN86oXwsUf1RV.png",
+   "https://lmad.in/public/storage/editor/s9DlOXPOJHsnrVPn6MsQAucnVxtZAQuBapuccKgW.png",
+   "https://lmad.in/public/storage/editor/6w8UIhPHyU3ave4ocH1D5m7nEbZbXVCsUWjeYKQP.png"
+  ],
+  "welcomeImage": "https://lmad.in/public/storage/editor/Zwep2ij5lPBD7MDexwy0AQ1kl71HL9dxGXp4Usw9.jpg"
+ },
+ "migrationFlags": {
+  "brokenAssets": [
+   {
+    "url": "http://www.lmad.in/cmsfile/contentimages/pressImg12.jpg",
+    "usedOn": [
+     "press-releases"
+    ]
+   },
+   {
+    "url": "http://www.lmad.in/cmsfile/contentimages/pressImg15.jpg",
+    "usedOn": [
+     "press-releases"
+    ]
+   },
+   {
+    "url": "http://www.lmad.in/cmsfile/contentimages/Savera_Camp_09Oct2011_Regional-8.jpg",
+    "usedOn": [
+     "press-releases"
+    ]
+   },
+   {
+    "url": "http://www.lmad.in/cmsfile/contentimages/Savera_Camp_09Oct2011_Regional-5.jpg",
+    "usedOn": [
+     "press-releases"
+    ]
+   },
+   {
+    "url": "http://www.lmad.in/cmsfile/contentimages/Savera_Camp_09Oct2011_Regional-2.jpg",
+    "usedOn": [
+     "press-releases"
+    ]
+   },
+   {
+    "url": "http://www.lmad.in/cmsfile/contentimages/Savera_Camp_08Oct2011_Regional-3.jpg",
+    "usedOn": [
+     "press-releases"
+    ]
+   },
+   {
+    "url": "http://www.lmad.in/editor/editor/images/smiley/msn/regular_smile.gif",
+    "usedOn": [
+     "richa-tiwari"
+    ]
+   }
+  ],
+  "oversizedPDFs": [
+   {
+    "file": "2025_Jamshedpur_Youth_Conference.pdf",
+    "mb": 5.33
+   },
+   {
+    "file": "2024_Jamshedpur_Youth_Conference.pdf",
+    "mb": 5.83
+   },
+   {
+    "file": "Impact_Assessment_Report_2024-2025.pdf",
+    "mb": 98.65
+   },
+   {
+    "file": "Impact_Assessment_Report_2023-2024.pdf",
+    "mb": 8.88
+   },
+   {
+    "file": "2022_Lucknow_Youth_Conference.pdf",
+    "mb": 8.71
+   },
+   {
+    "file": "2022_Uttarakhand_Youth_Conference.pdf",
+    "mb": 5.23
+   },
+   {
+    "file": "Impact_Assessment_Report_2022-2023.pdf",
+    "mb": 9.16
+   },
+   {
+    "file": "1996_LMAD_Youth_Conference.pdf",
+    "mb": 6.61
+   },
+   {
+    "file": "Aspirational_District_Project.pdf",
+    "mb": 7.35
+   }
+  ],
+  "googleDriveDependency": 64,
+  "staleEvents": [
+   {
+    "period": "July 2026",
+    "detail": "Tamar Youth Conference: 21 - 25 July, 2026",
+    "title": "Tamar Youth Conference",
+    "dates": "21 - 25 July, 2026",
+    "year": 2026
+   },
+   {
+    "period": "September 2026",
+    "detail": "Pune Workshop: Around the Ganesh Festival",
+    "title": "Pune Workshop",
+    "dates": "Around the Ganesh Festival",
+    "year": 2026
+   },
+   {
+    "period": "October 2026",
+    "detail": "26th Jamshedpur Youth Conference at Kerala Public School, Kadma: October 1 - 4",
+    "title": "26th Jamshedpur Youth Conference at Kerala Public School, Kadma",
+    "dates": "October 1 - 4",
+    "year": 2026
+   },
+   {
+    "period": "December 2026 – Early January 2027",
+    "detail": "December Workshop: Last week of December – Early January 2027",
+    "title": "December Workshop",
+    "dates": "Last week of December – Early January 2027",
+    "year": 2027
+   }
+  ],
+  "emptyPages": [
+   "ecertificate",
+   "home",
+   "registration_verification",
+   "video-gallery"
+  ]
+ }
+}
